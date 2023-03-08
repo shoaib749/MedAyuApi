@@ -3,7 +3,7 @@ from keras.models import load_model
 import tensorflow as tf
 import numpy as np
 
-import cv2
+# import cv2
 # import keras.applications.resnet50 import ResNet50
 # for importing image from url
 from skimage import io
@@ -65,12 +65,12 @@ def classify():
     # testing for preprocessing
     img_array = np.rint(image_array)
     img_array = img_array.astype('uint8')
-    hsv_img = cv2.cvtColor(img_array, cv2.COLOR_RGB2HSV)
-    mask = cv2.inRange(hsv_img, (25, 25, 0), (95, 270, 255))
-    result = cv2.bitwise_and(img_array, img_array, mask=mask)
-    result = result.astype('float64')
+    # hsv_img = cv2.cvtColor(img_array, cv2.COLOR_RGB2HSV)
+    # mask = cv2.inRange(hsv_img, (25, 25, 0), (95, 270, 255))
+    # result = cv2.bitwise_and(img_array, img_array, mask=mask)
+    # result = result.astype('float64')
 
-    image_array = tf.image.resize(result, [150, 150])
+    image_array = tf.image.resize(img_array, [150, 150])
     img_array = tf.expand_dims(image_array, 0)
 
     preds = model.predict(img_array)
