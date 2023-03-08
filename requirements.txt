@@ -1,6 +1,4 @@
-tensorflow
+tensorflow-cpu
 Flask~=2.2.2
 scikit-image~=0.19.3
 opencv-python~=4.7.0.68
-numpy~=1.21.6
-keras~=2.11.0
