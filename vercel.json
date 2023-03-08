@@ -11,10 +11,5 @@
           "src": "/(.*)",
           "dest": "/"
       }
-  ],
-  "functions": {
-    "pages/**/*": {
-      "excludeFiles": "public/**"
-    }
-  }
+  ]
 }
