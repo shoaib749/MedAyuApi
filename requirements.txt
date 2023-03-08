@@ -1,4 +1,6 @@
-tensorflow-cpu
+# tensorflow-cpu
 Flask~=2.2.2
 scikit-image~=0.19.3
+numpy
+keras
 
